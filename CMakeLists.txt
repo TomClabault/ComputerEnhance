@@ -20,4 +20,6 @@ project(
 
 # Adding something we can run - Output name matches target name
 add_executable(Interpreter8086 src/interpreter.cpp
-                               src/main.cpp)
+                               src/main.cpp
+
+                               include/interpreter.h)

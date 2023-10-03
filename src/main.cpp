@@ -1,7 +1,5 @@
 #include <iostream>
-
-#include <stdlib.h>
-#include <stdio.h>
+#include <fstream>
 
 int main(int argc, char** argv)
 {
@@ -11,5 +9,10 @@ int main(int argc, char** argv)
         return -1;
     }
 
-    FILE* input_asm_file = fopen(argv[1]);
+    unsigned char buffer[2];
+    std::ifstream input_asm_file(argv[1]);
+    input_asm_file.read(buffer, 2);
+
+    Interpreter8086 interpreter;
+    interpreter.interpret_bytes(buffer);
 }
