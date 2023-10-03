@@ -3,7 +3,7 @@
 
 class Interpreter8086
 {
-    void interpret_bytes(unsigned char bytes[2]);
+    void interpret_bytes(char bytes[2]);
 };
 
 #endif

@@ -11,12 +11,7 @@ project(
   VERSION 1.0
   LANGUAGES CXX)
 
-# If you set any CMAKE_ variables, that can go here.
-# (But usually don't do this, except maybe for C++ standard)
-
-# Find packages go here.
-
-# You should usually split this into folders, but this is a simple example
+include_directories(include)
 
 # Adding something we can run - Output name matches target name
 add_executable(Interpreter8086 src/interpreter.cpp

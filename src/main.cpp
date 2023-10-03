@@ -1,6 +1,8 @@
 #include <iostream>
 #include <fstream>
 
+#include "interpreter.h"
+
 int main(int argc, char** argv)
 {
     if (argc < 2)
@@ -9,7 +11,7 @@ int main(int argc, char** argv)
         return -1;
     }
 
-    unsigned char buffer[2];
+    char buffer[2];
     std::ifstream input_asm_file(argv[1]);
     input_asm_file.read(buffer, 2);
 
